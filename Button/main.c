@@ -50,11 +50,11 @@ int checkLongClick()
 	{
 		if((GPIOA->IDR & 1) == 0) //button not released
 		{
-			return lc = 0;
+			return 0;
 		}
 		i--;
 	}
-	return lc = 1;
+	return 1;
 }
 
 
@@ -66,11 +66,11 @@ int checkDoubleClick()
 	{
 		if(GPIOA->IDR & 1) //push button second time
 		{
-			return dc = 1;
+			return 1;
 		}
 		i--;
 	}	
-	return dc = 0;
+	return 0;
 }
 
 
