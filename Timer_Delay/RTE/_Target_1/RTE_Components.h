@@ -3,7 +3,7 @@
  * Auto generated Run-Time-Environment Configuration File
  *      *** Do not modify ! ***
  *
- * Project: 'usart_dma_interrupt' 
+ * Project: 'timer_delay' 
  * Target:  'Target 1' 
  */
 

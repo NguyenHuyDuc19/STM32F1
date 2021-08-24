@@ -2,7 +2,7 @@
 ".\objects\main.o"
 ".\objects\startup_stm32f10x_md.o"
 ".\objects\system_stm32f10x.o"
---strict --scatter ".\Objects\usart_dma_interrupt.sct"
+--strict --scatter ".\Objects\timer_delay.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
---list ".\Listings\usart_dma_interrupt.map" -o .\Objects\usart_dma_interrupt.axf
+--list ".\Listings\timer_delay.map" -o .\Objects\timer_delay.axf
