@@ -74,7 +74,6 @@ int checkDoubleClick()
 }
 
 
-
 void blinkLed()
 {
 	while(dcF)
