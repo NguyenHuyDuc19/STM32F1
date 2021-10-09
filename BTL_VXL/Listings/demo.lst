@@ -1,0 +1,81 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         
+    2 00000000                 AREA             asm, code, readonly
+    3 00000000                 entry
+    4 00000000         
+    5 00000000                 export           delay
+    6 00000000         delay
+    7 00000000 F04F 0000       MOV              R0, #0x00   ; set register R0
+    8 00000004 E001            B                LOOP        ; jump to loop
+    9 00000006         CONG
+   10 00000006 F100 0001       ADD              R0,R0,#1    ; add 1 to register
+                                                             R0
+   11 0000000A         LOOP
+   12 0000000A 2816            CMP              R0,#22      ; compare R0 with 5
+                                                            
+   13 0000000C D1FB            BNE              CONG        ; jump to CONG if n
+                                                            ot equal
+   14 0000000E 46F7            mov              pc, lr      ; return
+   15 00000010         END
+   16 00000010         
+                       
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=.\objects\demo.d -o.\objects\demo.o -I.\RTE\Device\STM32F103C8 -I.
+\RTE\_asm -IC:\Users\ducng\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\I
+nclude -IC:\Users\ducng\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device
+\Include --predefine="__UVISION_VERSION SETA 531" --predefine="_RTE_ SETA 1" --
+predefine="STM32F10X_MD SETA 1" --predefine="_RTE_ SETA 1" --list=.\listings\de
+mo.lst demo.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+CONG 00000006
+
+Symbol: CONG
+   Definitions
+      At line 9 in file demo.s
+   Uses
+      At line 13 in file demo.s
+Comment: CONG used once
+END 00000010
+
+Symbol: END
+   Definitions
+      At line 15 in file demo.s
+   Uses
+      None
+Comment: END unused
+LOOP 0000000A
+
+Symbol: LOOP
+   Definitions
+      At line 11 in file demo.s
+   Uses
+      At line 8 in file demo.s
+Comment: LOOP used once
+asm 00000000
+
+Symbol: asm
+   Definitions
+      At line 2 in file demo.s
+   Uses
+      None
+Comment: asm unused
+delay 00000000
+
+Symbol: delay
+   Definitions
+      At line 6 in file demo.s
+   Uses
+      At line 5 in file demo.s
+Comment: delay used once
+5 symbols
+338 symbols in table
