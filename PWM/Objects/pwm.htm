@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\pwm.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\pwm.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sat Oct 09 16:01:52 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sun Oct 10 22:09:15 2021
 <BR><P>
 <H3>Maximum Stack Usage =         28 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -198,7 +198,7 @@ Global Symbols
 
 <P><STRONG><a name="[42]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20 + Unknown Stack Size
-<LI>Call Chain = __rt_entry_main &rArr; main &rArr; Init_GPIO
+<LI>Call Chain = __rt_entry_main &rArr; main &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
 <LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -466,8 +466,8 @@ Global Symbols
 
 <P><STRONG><a name="[79]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[4e]"></a>Init_GPIO</STRONG> (Thumb, 110 bytes, Stack size 20 bytes, gpio.o(i.Init_GPIO))
-<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = Init_GPIO
+<P><STRONG><a name="[4e]"></a>GPIO_Init</STRONG> (Thumb, 110 bytes, Stack size 20 bytes, gpio.o(i.GPIO_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = GPIO_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -480,9 +480,9 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(.text)
 </UL>
 <P><STRONG><a name="[43]"></a>main</STRONG> (Thumb, 134 bytes, Stack size 0 bytes, pwm.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = main &rArr; Init_GPIO
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = main &rArr; GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_GPIO
+<BR>[Calls]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>

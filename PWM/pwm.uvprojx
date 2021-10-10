@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\GPIO_Lib</IncludePath>
+              <IncludePath>..\..\STM32F1_Lib</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -391,12 +391,12 @@
             <File>
               <FileName>gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\GPIO_Lib\gpio.c</FilePath>
+              <FilePath>..\..\STM32F1_Lib\gpio.c</FilePath>
             </File>
             <File>
               <FileName>gpio.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\GPIO_Lib\gpio.h</FilePath>
+              <FilePath>..\..\STM32F1_Lib\gpio.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -453,5 +453,20 @@
       </file>
     </files>
   </RTE>
+
+  <LayerInfo>
+    <Layers>
+      <Layer>
+        <LayName>&lt;Project Info&gt;</LayName>
+        <LayDesc></LayDesc>
+        <LayUrl></LayUrl>
+        <LayKeys></LayKeys>
+        <LayCat></LayCat>
+        <LayLic></LayLic>
+        <LayTarg>0</LayTarg>
+        <LayPrjMark>1</LayPrjMark>
+      </Layer>
+    </Layers>
+  </LayerInfo>
 
 </Project>

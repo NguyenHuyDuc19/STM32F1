@@ -1,5 +1,5 @@
-.\objects\gpio.o: ..\GPIO_Lib\gpio.c
-.\objects\gpio.o: ..\GPIO_Lib\gpio.h
+.\objects\gpio.o: ..\..\STM32F1_Lib\gpio.c
+.\objects\gpio.o: ..\..\STM32F1_Lib\gpio.h
 .\objects\gpio.o: C:\Users\ducng\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h
 .\objects\gpio.o: .\RTE\_Target_1\RTE_Components.h
 .\objects\gpio.o: C:\Users\ducng\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h

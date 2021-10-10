@@ -4,7 +4,7 @@
 int main(void)
 {
 	// Configure GPIO
-	Init_GPIO(GPIOB, 9, OUT_HIGH, AF_PP);
+	GPIO_Init(GPIOB, 9, OUT_HIGH, AF_PP);
 	
 	// Configure timer
 	RCC->APB1ENR |= RCC_APB1ENR_TIM4EN; //Clock TIM4 enabled 
