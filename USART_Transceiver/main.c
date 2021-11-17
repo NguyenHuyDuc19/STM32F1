@@ -47,7 +47,7 @@ void USART1_IRQHandler(void){
 			while(!((USART1->SR>>6) & 1));
 	}		
 	
-	if(USART2->SR &(1<<7)){ //check transmit data register empty 
+	if(USART1->SR &(1<<7)){ //check transmit data register empty 
 		
 	}
 }
