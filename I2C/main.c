@@ -74,11 +74,12 @@ void I2C_Write(uint8_t data)
 {
 	while(!(I2C1->SR1 & I2C_SR1_TXE)); //Wait for byte transfer complete
 	I2C1->DR = data; //Wata to write in that address
-	while(!(I2C1->SR1 & I2C_SR1_BTF)); //Wait for data byte transfer succeeded
 }
 
 
 void I2C_Stop(void)
 {
+	//Wait for data byte transfer succeeded and data register empty
+	while(!((I2C1->SR1 & I2C_SR1_BTF) | (I2C1->SR1 & I2C_SR1_TXE)));
 	I2C1->CR1 |= I2C_CR1_STOP; //Stop generation
 }
